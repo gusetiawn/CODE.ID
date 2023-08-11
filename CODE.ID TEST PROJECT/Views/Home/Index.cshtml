@@ -1,0 +1,30 @@
+﻿@model List<Comment>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var comment in Model)
+        {
+            <tr>
+                <td>@comment.Id</td>
+                <td>@comment.Name</td>
+                <td>@comment.Email</td>
+                <td>@comment.Body</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="pagination">
+    @for (var i = 1; i <= ViewBag.TotalPages; i++)
+    {
+        <a href="@Url.Action("Index", new { page = i, pageSize = ViewBag.PageSize })">@i</a>
+    }
+</div>

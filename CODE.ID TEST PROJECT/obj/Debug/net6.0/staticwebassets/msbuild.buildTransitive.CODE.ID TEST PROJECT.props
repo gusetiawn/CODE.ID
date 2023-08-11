@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\CODE.ID TEST PROJECT.props" />
+</Project>
